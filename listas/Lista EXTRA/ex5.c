@@ -1,46 +1,46 @@
 #include <stdio.h>
 #include <string.h>
+#define tam 200
+
 
 int main()
 {
-    char a[200],palavra_atual[200],palavra_maior[200];
-    int tamanhomaior=0,tamanhoatual=0;
-    printf("Digite uma frase: ");
-    fgets(a,200,stdin);
-    a[strcspn(a, "\n")] = '\0';
-    for(int c=0;a[c]!='\0';c++)
+    char frase[tam+1],palavra_atual[tam],palavra_maior[tam];
+    int c,tamanho_atual=0,tamanho_maior=0;
+    printf("Digite uma frase(ate 200 caracteres!): ");
+    fgets(frase,200,stdin);
+    for(c=0;frase[c]!='\n';++c)
     {
-        if(a[c] != ' ')
+        if(frase[c]!=' ')
         {
-            palavra_atual[tamanhoatual] = a[c];
-            tamanhoatual++;
-            
+            palavra_atual[tamanho_atual] = frase[c];
+            tamanho_atual +=1;
         }
         else
         {
-            palavra_atual[tamanhoatual] = '\0';
-            if(tamanhomaior==0)
+            palavra_atual[tamanho_atual] = '\0';
+            palavra_maior[tamanho_maior] = '\0';
+            if(tamanho_maior==0)
             {
-                tamanhomaior = tamanhoatual;
+                tamanho_maior = tamanho_atual;
                 strcpy(palavra_maior,palavra_atual);
             }
-            
-            if(tamanhoatual>tamanhomaior)
+            if(tamanho_atual>tamanho_maior)
             {
+                tamanho_maior = tamanho_atual;
                 strcpy(palavra_maior,palavra_atual);
-                tamanhomaior = tamanhoatual;
             }
-            tamanhoatual = 0;
+            printf("A palavra %s tem %i letra(s)\n",palavra_atual,tamanho_atual);
+            memset(palavra_atual,0,sizeof(palavra_atual));
+            tamanho_atual=0;
         }
-        
-
     }
-    palavra_atual[tamanhoatual] = '\0';
-    if(tamanhoatual>tamanhomaior)
-    {
-        strcpy(palavra_maior,palavra_atual);
-        tamanhomaior = tamanhoatual;
-    }
-    printf("A maior palavra e: %s com %i letras",palavra_maior,tamanhomaior);
+    if(tamanho_atual>tamanho_maior)
+            {
+                tamanho_maior = tamanho_atual;
+                strcpy(palavra_maior,palavra_atual);
+            }
+    printf("A palavra %s tem %i letra(s)\n",palavra_atual,tamanho_atual);
+    printf("A maior palavra e: %s\n",palavra_maior);
     return 0;
 }
