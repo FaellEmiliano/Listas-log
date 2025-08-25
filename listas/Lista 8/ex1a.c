@@ -13,7 +13,6 @@ typedef struct
 cadastro pessoa[5] = {'\0'}; 
 int c,c2;
 
-
 int menu()
 {
     int escolha;
@@ -30,8 +29,6 @@ int menu()
     getchar();
     return(escolha);
 }
-
-
 
 void limpar(char *nome)
 {
@@ -160,7 +157,7 @@ void remover()
     }
     printf("Digite o numero do cadastro para remover: \n");
     scanf("%i",&a);
-    if(a-1>=0)
+    if(a-1>=0 && a-1<=5)
     {
         memset(&pessoa[a-1],0,sizeof(cadastro));
     }
