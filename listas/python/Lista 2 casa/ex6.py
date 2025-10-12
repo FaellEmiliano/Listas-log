@@ -1,13 +1,28 @@
-import math
-a = int(input("Digite A: "))
-b = int(input("Digite B: "))
-c = int(input("Digite C: "))
+mes = int(input("digite um numero de 0 a 12: "))
 
-delta = pow(b,2) -4*a*c
+match(mes):
+    case 1:
+        print("Janeiro")
+    case 2:
+        print("Fevereiro")
+    case 3:
+        print("Março")
+    case 4:
+        print("Abril")
+    case 5:
+        print("Maio")
+    case 6:
+        print("Junho")
+    case 7:
+        print("Julho")
+    case 8:
+        print("Agosto")
+    case 9:
+        print("Setembro")
+    case 10:
+        print("Outubro")
+    case 11:
+        print("Novembro")
+    case 12:
+        print("Dezembro")
 
-if delta < 0:
-    print("Nao tem resultado")
-elif delta > 0:
-    print(f'x1: {(-b +math.sqrt(delta))/(2*a)} x2: {(-b - math.sqrt(delta))/(2*a)}')
-else:
-    print(f'x: {-b/(2*a)}')

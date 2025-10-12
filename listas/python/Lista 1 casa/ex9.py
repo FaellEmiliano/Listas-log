@@ -1,0 +1,1 @@
+print(f'A média é: {(float(input("Digite a nota da prova 1: "))*4 + float(input("Digite a nota da prova 2: "))*4 + float(input("Digite a nota das atividade: "))*2)/10}')

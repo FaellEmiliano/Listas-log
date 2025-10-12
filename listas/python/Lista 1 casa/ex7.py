@@ -1,3 +1,2 @@
-nr_coelho = int(input("Digite o numero de coelhos: "))
-custo = - (nr_coelho * 0.70)/18 + 10
-print(f'O custo é de: RS:{custo:.2f}')
+r = int(input('Digite o raio: '))
+print(f'A área é igual a: {4*3.1415 * r**2}\nSeu volume é de {3.1415*r**3*4/3}')

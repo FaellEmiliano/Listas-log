@@ -1,4 +1,3 @@
-a = input("Digite o valor de A: ")
-b = input("Digite o valor de B: ")
-a,b = b,a
-print(f'Valor de A: {a}\nValor de B: {b}')
+a = int(input('Digite a altura: '))
+p = int(input('Digite a largura'))
+print(f'A área é: {a*p}\nO perímetro é: {2*a+2*p}')

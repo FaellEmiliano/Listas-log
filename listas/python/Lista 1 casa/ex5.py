@@ -1,4 +1,1 @@
-from math import pow
-
-num = int(input("Digite um número: "))
-print(f'O quadrado de {num} é {pow(num,2):.0f}')
+print(f'O seu IMC é: {float(input('Digite sua massa: '))/float(input('Digite sua altura: '))**2}')

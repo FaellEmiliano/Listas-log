@@ -1,0 +1,1 @@
+print(f'A velocidade média foi de: {float(input("Digite a distância: "))/float(input("Digite o tempo: "))}')
